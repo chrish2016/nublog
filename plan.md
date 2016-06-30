@@ -3,13 +3,13 @@
 
 
 
-# 1. SERVER
+# 1. SERVER (DONE)
 ```
-ERD
+ERD (done)
 
-Tables
+Tables (done)
 
-Export SQL
+Export SQL (done)
 
 ```
 

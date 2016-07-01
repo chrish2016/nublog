@@ -1,8 +1,6 @@
 ###NUBLOG
 
 
-
-
 # 1. SERVER (DONE)
 ```
 ERD (done)
@@ -14,8 +12,7 @@ Export SQL (done)
 ```
 
 
-
-#2. FRONT-END
+#2. FRONT-END (DONE)
 ```
 Welcome Page:
   * Login
@@ -63,26 +60,28 @@ Admin Page
 
 
 
-
 #3. BACK-END
 ```
-Controllers
-  * Users
-  * Messages
-
-Models
-  * User
-  * Message
-
-Routes
-
-Database
+Database (done)
   * connections
   * tests
 
+Forms (DONE)
+  - Login
+  - Registration
+  - logout
+
+Profile Page
+  - list of friends
+  - list of "no friends"
+  - page by user id
+  - post messages on other pages
+  - delete posts
+  - edit
+  - delete members
+  - admin level
+
 ```
-
-
 
 
 #4. CSS/Extras

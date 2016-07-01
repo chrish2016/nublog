@@ -7,13 +7,7 @@
 {% endblock %}
 {% block title %}NUBLOG{% endblock %}
 {% block body %}
-{% with messages = get_flashed_messages() %}
-  {% if messages %}
-    {% for message in messages %}
-      <p class='error'>{{message}}</p>
-    {% endfor %}
-  {% endif %}
-{% endwith %}
+
 {% endblock %}
 {% block content %}
 <!--/navbar-BEGINNING -->
@@ -25,32 +19,44 @@
       </form> -->
     </div>
     <div id="navbar" class="navbar-collapse collapse">
-      <form class="navbar-form navbar-right">
-        <div class="form-group">
-          <input type="email" name="email" placeholder="Email"class="form-control">
-        </div>
-        <div class="form-group">
-          <input type="password" name="password" placeholder="Password" class="form-control">
-        </div>
-        <button type="submit" class="btn btn-success">Sign in</button>
-      </form>
+        <form action="/login"  method="post" class="navbar-form navbar-right">
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Email"class="form-control">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+            <input type="submit" value="Log In"class="btn btn-success">
+          </div>
+        </form>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {% for message in messages %}
+              <p style="color:white;font-size:28px;letter-spacing:5px;">{{message}}</p>
+            {% endfor %}
+          {% endif %}
+        {% endwith %}
     </div>
   </div>
 </nav><!--/navbar-END -->
+
+
 <div  class="container">
   <h2>Wanna Join? Easy peasy…</h2>
     <div class="col-lg-6">
       <h4>Please fill out registration form:</h4>
-      <form action="/registration"  method="post">
-        <input type="text" name="firstname" placeholder="first name:" class="form-control"><br>
-        <input type="text" name="lastname" placeholder="last name:" class="form-control"><br>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <p class='error'>{{message}}</p>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+      <form action="/register"  method="post">
+        <input type="text" name="first_name" placeholder="first name:" class="form-control"><br>
+        <input type="text" name="last_name" placeholder="last name:" class="form-control"><br>
         <input type="text" name="alias" placeholder="pick an alias to use:" class="form-control"><br>
         <input type="email" name="email" placeholder="please use a valid email address:" class="form-control"><br>
         <input type="password" name="password" placeholder="please choose an 8 character password:" class="form-control"><br>
         <input type="password" name="password_confirm" placeholder="please retype the password used to 'reconfirm':" class="form-control"><br>
-        <form action="/register" method="post" class="navbar-form navbar-right">
-          <input type="submit" value="REGISTER!" class="btn btn-success"></input>
-        </form>
+        <input type="submit" value="REGISTER!" class="btn btn-success"></input>
       </form>
     </div>
   </div> <!-- /container -->

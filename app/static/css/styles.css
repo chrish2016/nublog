@@ -1,3 +1,88 @@
 * {
-  font-family: monaco;
+  font-family: arial;
+}
+
+form {
+  display: inline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.05em;
+  font-weight: bold;
+}
+
+.friends {
+  margin-right: 10px;
+  display: inline;
+  width: 300px;
+  font-size: 24px;
+  color: black;
+
+}
+
+hr {
+  border-bottom: solid purple 0.1em;
+}
+
+
+li, a {
+  text-decoration: none;
+  color: black;
+}
+
+textarea {
+  border: none;
+  font-size: 14px;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+}
+
+#footer {
+  display: block;
+  height: 75px;
+  width: 1150px;
+  border: none;
+}
+
+#section {
+  display: block;
+  width: 1150px;
+  height: 825px;
+}
+article {
+  vertical-align: top;
+  display: inline-block;
+  width: 935px;
+  height: 750px;
+}
+
+aside {
+  display: inline-block;
+  width: 200px;
+  height: auto;
+}
+
+.post {
+  font-size: 18px;
+  background-color: red;
+  color: white;
+  padding: 15px;
+  border-radius: 20px;
+  width: 850px;
+  height: auto;
+}
+
+.functions {
+  font-size: 12px;
+  letter-spacing: 5px;
+  margin-left: 15px;
+}
+
+.members {
+  font-size: 24px;
+  width: 200px;
+  text-align: center;
+  line-height: 24px;
+  display: block;
 }

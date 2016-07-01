@@ -1,15 +1,17 @@
 from system.core.controller import *
 
-class Welcome(Controller):
+class Users(Controller):
     def __init__(self, action):
-        super(Welcome, self).__init__(action)
+        super(Users, self).__init__(action)
 
-        self.load_model('WelcomeModel')
+        self.load_model('User')
         self.db = self._app.db
 
     def index(self):
-        return self.load_view('index.html')
+        return self.load_view('user.html')
 
+    def admin(self):
+        return self.load_view('admin.html')
 
 
 
